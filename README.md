@@ -16,7 +16,11 @@ target_link_libraries(releasechat PRIVATE ${PostgreSQL_LIBRARIES})
 ```
 ##### Примечание, если у Вас линукс, возможно Вам понадобиться доставить некоторые библиотеки. Вот список:
 ``` bash
-apt install libqt4-dev libqt5sql5-psql postgresql
+apt install libqt4-dev libqt5sql5-psql
+```
+##### Если у вас нет основных библиотек для работы, то лучше сначала поставить их. Из перечисленных, часть может не понадобиться вовсе, всё зависит, что конкретно Вы будете разрабатывать и на какой версии qt.
+``` bash
+apt insatll postgresql pqxx pgadmin4-server qtcreator qtbase5-dev qt6-wayland qt6-tools-dev qt6-base-dev cmake 
 ```
 ##### Это часть, которая может понадобиться, так же есть и библиотеки в самом qt, которые также завязаны на postgresql.
 
