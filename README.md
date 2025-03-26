@@ -36,7 +36,7 @@ void MainWindow::tableviewLoad()
   val.push_back("Enabled");
 
   QSqlQueryModel *query = new QSqlQueryModel(this); //объявляем модель запроса
-  query->setQuery("select * from users order by 1"); //задаём сам запрсо
+  query->setQuery("select * from users order by 1"); //задаём сам запрос
   if(query->lastError().isValid()) //проверка на выполнение запроса
     qDebug() << query->lastError(); //если невалиден, то выдаст в отладку сообщение почему
 
