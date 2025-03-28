@@ -6,6 +6,10 @@ bool DataBaseConnection::createConnection() {
   //db.setUserName("Ваш пользователь от базы данных");
   //db.setPassword("Ваш пароль от базы данных");
 
+  db.setDatabaseName("ai");
+  db.setUserName("Diofik");
+  db.setPassword("garbe527_pech");
+
   if(!db.open()) {
     qDebug() << "Connection in database failed";
     return false;

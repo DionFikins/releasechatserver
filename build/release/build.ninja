@@ -221,7 +221,7 @@ build releasechatserver_autogen/timestamp releasechatserver_autogen/mocs_compila
 #############################################
 # Phony custom command for CMakeFiles/releasechatserver_autogen_timestamp_deps
 
-build CMakeFiles/releasechatserver_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/releasechatserver_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Sql.so.6.4.2
+build CMakeFiles/releasechatserver_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/releasechatserver_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Sql.so.6.4.2
 
 
 #############################################
