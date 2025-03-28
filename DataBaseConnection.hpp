@@ -17,5 +17,6 @@ public:
   void queryUpdate(QString str);
   void unbanQuery(QString str);
   void loadData(QString str);
+  void queryData(QString str);
 };
 #endif // DATABASECONNECTION_H
