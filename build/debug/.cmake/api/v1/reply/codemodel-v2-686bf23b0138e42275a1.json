@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-dfcf425690c0c1e5d47b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "releasechatserverserver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "releasechatserver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-releasechatserver-Debug-982a2da58ccee3860229.json",
+					"name" : "releasechatserver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "releasechatserver_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-releasechatserver_autogen-Debug-992d5b823bd9308b7897.json",
+					"name" : "releasechatserver_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "releasechatserver_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-releasechatserver_autogen_timestamp_deps-Debug-cb1cfa39151fa4531f47.json",
+					"name" : "releasechatserver_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/diofik/qt_projects/releasechatserver/build/debug",
+		"source" : "/home/diofik/qt_projects/releasechatserver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(releasechat VERSION 0.1 LANGUAGES CXX)
+project(releasechatserverserver VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -43,18 +43,18 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(releasechat
+    qt_add_executable(releasechatserver
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 else()
     if(ANDROID)
-        add_library(releasechat SHARED
+        add_library(releasechatserver SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(releasechat
+        add_executable(releasechatserver
             ${PROJECT_SOURCES}
         )
     endif()
@@ -64,13 +64,13 @@ endif()
 
 find_package(PostgreSQL REQUIRED)
 
-target_include_directories(releasechat PRIVATE ${PostgreSQL_INCLUDE_DIRS})
+target_include_directories(releasechatserver PRIVATE ${PostgreSQL_INCLUDE_DIRS})
 
-target_link_libraries(releasechat PRIVATE Qt6::Sql)
-target_link_libraries(releasechat PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(releasechat PRIVATE ${PostgreSQL_LIBRARIES})
+target_link_libraries(releasechatserver PRIVATE Qt6::Sql)
+target_link_libraries(releasechatserver PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(releasechatserver PRIVATE ${PostgreSQL_LIBRARIES})
 
-set_target_properties(releasechat PROPERTIES
+set_target_properties(releasechatserver PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -78,10 +78,10 @@ set_target_properties(releasechat PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS releasechat
+install(TARGETS releasechatserver
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(releasechat)
+    qt_finalize_executable(releasechatserver)
 endif()
