@@ -66,9 +66,5 @@ void MainWindow::on_btn_openprivatechat_clicked() {
 }
 
 void MainWindow::on_newConnection_triggered() {
-  //int ret = pthread_create(&thread, NULL, , &status);
-  //if(ret != 0)
-  //  qDebug() << "error create thread";
   serv->AnyConnection();
 }
-
