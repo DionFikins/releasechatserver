@@ -2,9 +2,9 @@
 
 bool DataBaseConnection::createConnection() {
   QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-  //db.setDatabaseName("Ваша база данных");
-  //db.setUserName("Ваш пользователь от базы данных");
-  //db.setPassword("Ваш пароль от базы данных");
+  db.setDatabaseName("Ваша база данных");
+  db.setUserName("Ваш пользователь от базы данных");
+  db.setPassword("Ваш пароль от базы данных");
 
   if(!db.open()) {
     qDebug() << "Connection in database failed";
