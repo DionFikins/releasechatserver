@@ -7,7 +7,7 @@ bool DataBaseConnection::createConnection() {
   //db.setPassword("Ваш пароль от базы данных");
 
   db.setDatabaseName("ai");
-  db.setUserName("Diofik");
+  db.setUserName("diofik");
   db.setPassword("garbe527_pech");
 
   if(!db.open()) {

@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QString>
 #include "DataBaseConnection.hpp"
+#include <thread>
 
 #define PORT 7777
 

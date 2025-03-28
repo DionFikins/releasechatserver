@@ -11,6 +11,7 @@
 #include "serversetting.hpp"
 #include "publicchat.hpp"
 #include "privatechat.hpp"
+#include <thread>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

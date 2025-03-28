@@ -27,6 +27,7 @@ void ServerSetting::StartServer() {
 }
 
 bool ServerSetting::AnyConnection() {
+
   if(listen(_server, 3) < 0) {
     qDebug() << "Listen error";
     return false;
