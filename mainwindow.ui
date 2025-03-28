@@ -104,11 +104,23 @@
     <addaction name="separator"/>
     <addaction name="mb_btn_exit"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Открыть для подключения</string>
+    </property>
+    <addaction name="newConnection"/>
+   </widget>
    <addaction name="mb_server"/>
+   <addaction name="menu"/>
   </widget>
   <action name="mb_btn_exit">
    <property name="text">
     <string>Выход</string>
+   </property>
+  </action>
+  <action name="newConnection">
+   <property name="text">
+    <string>Новое подключение к серверу</string>
    </property>
   </action>
  </widget>

@@ -8,7 +8,7 @@
 #include <QSqlTableModel>
 #include <QTableView>
 #include <QSqlQuery>
-#include "DataBaseConnection.hpp"
+#include "serversetting.hpp"
 #include "publicchat.hpp"
 #include "privatechat.hpp"
 
@@ -27,7 +27,7 @@ public:
   static MainWindow* createPublic();
   static MainWindow* createPrivate();
 
-  DataBaseConnection *getinfo = new DataBaseConnection;
+  ServerSetting *serv = new ServerSetting;
   QSqlTableModel *model = new QSqlTableModel;
   QTableView *view = new QTableView;
 
@@ -41,6 +41,8 @@ private slots:
 
   void on_btn_openallchat_clicked();
   void on_btn_openprivatechat_clicked();
+
+  void on_newConnection_triggered();
 
 private:
   Ui::MainWindow *ui;

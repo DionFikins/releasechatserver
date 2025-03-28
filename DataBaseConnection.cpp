@@ -2,9 +2,14 @@
 
 bool DataBaseConnection::createConnection() {
   QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-  db.setDatabaseName("Ваша база данных");
-  db.setUserName("Ваш пользователь от базы данных");
-  db.setPassword("Ваш пароль от базы данных");
+  //db.setDatabaseName("Ваша база данных");
+  //db.setUserName("Ваш пользователь от базы данных");
+  //db.setPassword("Ваш пароль от базы данных");
+
+  db.setDatabaseName("ai");
+  db.setUserName("diofik");
+  db.setPassword("garbe527_pech");
+
   if(!db.open()) {
     qDebug() << "Connection in database failed";
     return false;
@@ -12,7 +17,7 @@ bool DataBaseConnection::createConnection() {
   else {
     qDebug() << "Connection in database complited!";
     return true;
-    }
+  }
 }
 
 void DataBaseConnection::exitConnection()
@@ -38,6 +43,15 @@ void DataBaseConnection::unbanQuery(QString str)
   QSqlQuery query;
   query.prepare("update users set enable_user = 'true' where name_user = :login");
   query.bindValue(":login", str);
+  if(query.lastError().isValid())
+    qDebug() << query.lastError();
+  qDebug() << str;
+  query.exec();
+}
+
+void DataBaseConnection::queryData(QString str) {
+  QSqlQuery query;
+  query.prepare(str);
   if(query.lastError().isValid())
     qDebug() << query.lastError();
   qDebug() << str;

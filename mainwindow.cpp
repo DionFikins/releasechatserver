@@ -6,17 +6,16 @@ MainWindow::MainWindow(QWidget *parent)
   , ui(new Ui::MainWindow) {
   ui->setupUi(this);
 
-  getinfo->createConnection();
+  serv->StartServer();
   tableviewLoad();
 }
 
 MainWindow::~MainWindow() {
-  getinfo->exitConnection();
+  serv->ExitProgram();
   delete ui;
 }
 
-void MainWindow::tableviewLoad()
-{
+void MainWindow::tableviewLoad() {
   QVector<QString> val;
   val.push_back("ID");
   val.push_back("Login");
@@ -46,26 +45,27 @@ void MainWindow::on_mb_btn_exit_triggered() {
   this->close();
 }
 
-void MainWindow::on_btn_blockuser_clicked()
-{
-  getinfo->queryUpdate(ui->le_user->text());
+void MainWindow::on_btn_blockuser_clicked() {
+  serv->getinfo->queryUpdate(ui->le_user->text());
   tableviewLoad();
 }
-void MainWindow::on_btn_unblockuser_clicked()
-{
-  getinfo->unbanQuery(ui->le_user->text());
+void MainWindow::on_btn_unblockuser_clicked() {
+  serv->getinfo->unbanQuery(ui->le_user->text());
   tableviewLoad();
 }
 
-void MainWindow::on_btn_openallchat_clicked()
-{
+void MainWindow::on_btn_openallchat_clicked() {
   qDebug() << "Open public chat";
   PublicChat puc;
   puc.exec();
 }
-void MainWindow::on_btn_openprivatechat_clicked()
-{
+void MainWindow::on_btn_openprivatechat_clicked() {
   qDebug() << "Open private chat";
   PrivateChat prc;
   prc.exec();
 }
+
+void MainWindow::on_newConnection_triggered() {
+    serv->AnyConnection();
+}
+
