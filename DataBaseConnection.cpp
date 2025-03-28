@@ -23,7 +23,7 @@ void DataBaseConnection::exitConnection()
   qDebug() << "Connection close";
 }
 
-void DataBaseConnection::queryUpdate(QString str)
+void DataBaseConnection::queryUpdate(std::string str)
 {
   QSqlQuery query;
   query.prepare("update users set enable_user = 'false' where name_user = :login");
@@ -34,7 +34,7 @@ void DataBaseConnection::queryUpdate(QString str)
   query.exec();
 }
 
-void DataBaseConnection::unbanQuery(QString str)
+void DataBaseConnection::unbanQuery(std::string str)
 {
   QSqlQuery query;
   query.prepare("update users set enable_user = 'true' where name_user = :login");
@@ -45,7 +45,7 @@ void DataBaseConnection::unbanQuery(QString str)
   query.exec();
 }
 
-void DataBaseConnection::queryData(QString str) {
+void DataBaseConnection::queryData(std::string str) {
   QSqlQuery query;
   query.prepare(str);
   if(query.lastError().isValid())

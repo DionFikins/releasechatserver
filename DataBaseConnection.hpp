@@ -14,9 +14,9 @@ class DataBaseConnection {
 public:
   bool createConnection();
   void exitConnection();
-  void queryUpdate(QString str);
-  void unbanQuery(QString str);
-  void loadData(QString str);
-  void queryData(QString str);
+  void queryUpdate(std::string str);
+  void unbanQuery(std::string str);
+  void loadData(std::string str);
+  void queryData(std::string str);
 };
 #endif // DATABASECONNECTION_H
