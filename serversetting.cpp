@@ -52,7 +52,7 @@ void ServerSetting::EnterMessage(string response) {
   send(_socket, response.c_str(), response.length(), 0);
 }
 
-string ServerSetting::OnMessage() {
+std::string ServerSetting::OnMessage() {
   memset(_buffer, 0, sizeof(_buffer));
   int bytes = read(_socket, _buffer, 1024);
   if(bytes <=) qDebug() << "User is offline";
