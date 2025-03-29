@@ -67,4 +67,7 @@ void MainWindow::on_btn_openprivatechat_clicked() {
 
 void MainWindow::on_newConnection_triggered() {
   serv->AnyConnection();
+  std::string val = serv->OnMessage();
+  int v = db->queryIntData(val);
+  serv->EnterMessage(std::to_string(v));
 }

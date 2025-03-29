@@ -12,6 +12,7 @@
 #include "serversetting.hpp"
 #include "publicchat.hpp"
 #include "privatechat.hpp"
+#include "DataBaseConnection.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +29,7 @@ public:
   static MainWindow* createPublic();
   static MainWindow* createPrivate();
 
+  DataBaseConnection *db = new DataBaseConnection;
   ServerSetting *serv = new ServerSetting;
   QSqlTableModel *model = new QSqlTableModel;
   QTableView *view = new QTableView;

@@ -49,11 +49,23 @@ void DataBaseConnection::unbanQuery(QString str)
   query.exec();
 }
 
-void DataBaseConnection::queryData(QString str) {
+void DataBaseConnection::queryData(std::string str) {
   QSqlQuery query;
-  query.prepare(str);
+  query.prepare(str.c_str());
   if(query.lastError().isValid())
     qDebug() << query.lastError();
-  qDebug() << str;
+  qDebug() << str.c_str();
   query.exec();
+}
+
+int DataBaseConnection::queryIntData(std::string str) {
+  QSqlQuery query;
+  qDebug() << str.c_str();
+  query.prepare(str.c_str());
+  if(query.lastError().isValid())
+    qDebug() << query.lastError();
+  query.exec();
+  qDebug() << query.value(0).toString();
+  if(query.next()) return query.value(0).toInt();
+  return -1;
 }
