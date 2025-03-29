@@ -1,9 +1,0 @@
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/releasechatserver.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/edit_cache.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/rebuild_cache.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/list_install_components.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/install.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/install/local.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/install/strip.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/releasechatserver_autogen_timestamp_deps.dir
-/home/diofik/qt_projects/releasechatserver/build/release/CMakeFiles/releasechatserver_autogen.dir
