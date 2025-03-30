@@ -37,8 +37,6 @@ set(PROJECT_SOURCES
         privatechat.ui
         serversetting.cpp
         serversetting.hpp
-        serverquery.cpp
-        serverquery.hpp
         ${TS_FILES}
 )
 

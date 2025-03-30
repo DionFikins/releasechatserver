@@ -17,7 +17,7 @@ public:
   void queryUpdate(QString str);
   void unbanQuery(QString str);
   void loadData(QString str);
-  void queryData(std::string str);
-  int queryIntData(std::string str);
+  int connData(std::string str);
+  std::string queryData(std::string str);
 };
 #endif // DATABASECONNECTION_H

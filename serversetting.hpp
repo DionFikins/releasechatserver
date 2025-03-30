@@ -33,7 +33,6 @@ public:
   void ExitProgram();
   void EnterMessage(std::string response);
   std::string OnMessage();
-  void RegistUser();
 };
 
 #endif // SERVERSETTING_HPP
